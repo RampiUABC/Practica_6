@@ -1,31 +1,23 @@
 package PooLab.practica_5;
 
-/**
- * Representa una carta individual del mazo con un valor numérico y una figura.
- *
- * @author Ramiro Maldonado Madujano (Matrícula: 1184001)
- */
 public class Carta {
     private int valor;
     private Figura figura;
 
-    /**
-     * Constructor que inicializa los atributos de la carta.
-     *
-     * @param valor  El valor numérico de la carta (1 al 13).
-     * @param figura La figura de la carta especificada por el enum Figura.
-     */
     public Carta(int valor, Figura figura) {
         this.valor = valor;
         this.figura = figura;
     }
 
-    /**
-     * Regresa la representación en cadena de la carta.
-     * Utiliza letras para los valores numéricos especiales (AS, JOTA, REINA, REY).
-     *
-     * @return Cadena con el valor y la figura de la carta en el formato solicitado.
-     */
+    // Estos dos métodos son nuevos y necesarios
+    public int getValor() {
+        return valor;
+    }
+
+    public Figura getFigura() {
+        return figura;
+    }
+
     @Override
     public String toString() {
         String valorStr;
